@@ -2,20 +2,131 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.field{
-    margin: 5px;
-    padding: 0px;
+
+.frame{
+    width: 80%;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+img{
+    width: 80px; 
+    height: auto; 
+}
+
+.box0{
+    text-align: center;
+    
+}
+
+.box1{
+    width: 100%;
+    height: 60px; 
+    margin: 35px 0px;
+    background-color: rgb(205, 219, 254); 
+    border-bottom: 2px solid #96a2ae;
+    input[type="email"], input[type="password"] {
+    border: none;
+    width: 80%;
+    background-color: rgb(205, 219, 254);
+    }
+}
+
+
+.l_text1{
+    display: block; 
+    font-size: 14px; 
+    padding: 5px 10px; 
+}
+
+.text1{
+    font-size: 18px; 
+    padding: 0 0 7px 10px; 
+    width: 100%;
+    background-color: #eee;
+    border: none; 
+    outline: none; 
+    border-bottom: 2px solid #c2c2c2;
+    box-sizing: border-box;
+}
+
+.text1:focus{
+    border-bottom: 2px solid #1874c0;
+}
+
+.l_text2{
+    display: block;
+    font-size: 13px;
+    padding: 5px 10px;  
+}
+
+.text2{
+    font-size: 18px; 
+    padding: 2px 0 7px 10px;
+    width: 100%;
+    background-color: rgb(255, 255, 255); 
+    border: none; 
+    outline: none; 
+    border-bottom: 2px solid #c2c2c2;
+    box-sizing: border-box; 
+}
+
+text2:focus{
+    border-bottom: 2px solid #1874c0; 
+}
+
+
+.btn1{
+    position: relative;
+    width:100%; 
+    height:50px;
+    top: 10px; 
+    color:#fff; 
+    border:none; 
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+    background:#1874c0;
+    display: block; 
+    -webkit-appearance: none;
+    outline: 0; 
+    cursor: pointer;
+}
+.btn1:hover{
+    opacity: 0.8;
+}
+
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline; 
+}
+
+p {
     text-align: center;
 }
 
-.actions {
-    margin: 5px;
-    padding: 0px;
-    text-align: center;
+.box-login input[type="submit"] {
+
+    position: relative; 
+    width:100%; 
+    height:50px; 
+    top: 10px; 
+    color:#fff; 
+    border:none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+    background:#1874c0; 
+    display: block; 
+    -webkit-appearance: none;
+    outline: 0; 
+    cursor: pointer;
 }
 
-img {
-    border-radius: 50%;
-    width:  180px;      
-    height: 180px;       
+.box-login input[type="submit"]:hover {
+    cursor: pointer;
+    background: #648bf0;
 }
