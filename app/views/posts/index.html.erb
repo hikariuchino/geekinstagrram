@@ -1,5 +1,5 @@
 <h1>GeekInstagram</h1>
-<h3>Post一覧</h3>
+<h3>投稿一覧</h3>
 <h3>投稿を検索</h3>
  <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
    <%= text_field_tag :search %>
@@ -12,9 +12,14 @@
 <% if user_signed_in? %>
 <%= link_to "マイページへ", user_path(current_user.id) %>　
 <% end %>
+
+
 <div class="posts-container">
 
+  <div class="row">
+    
     <% @posts.each do |t| %>
+        <div class="col-sm">
         <div class="post">
             <%= t.user.email %>
             <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
@@ -40,8 +45,11 @@
         <% if user_signed_in? && current_user.id == t.user_id %>  
             <%= link_to "編集する", edit_post_path(t.id) %>
             <%= button_to "削除する", post_path(t.id), method: :delete %>
-        <% end %> 　
+        <% end %> 
+            </div>　
     <% end %>
 
 </div>
+</div>
+
 
