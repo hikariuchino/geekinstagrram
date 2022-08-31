@@ -2,6 +2,10 @@ class PostsController < ApplicationController
     before_action :authenticate_user!
     def index
         @posts = Post.all
+        search = params[:search]
+        @posts = @posts.joins(:user).where("posts.body LIKE ? OR users.name LIKE ?", "%#{search}%", "%#{search}%") if search.present?
+
+
     end
 
     def new
