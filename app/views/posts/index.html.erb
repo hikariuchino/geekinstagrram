@@ -9,10 +9,12 @@
 
 
 <h3>投稿一覧</h3>
+<div class="container">
+    <div class="row">
 
     
         <% @posts.each do |t| %>
-           
+           <div class="col-sm"
                 <div class="post">
                     <%= t.user.email %>
                     <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
@@ -38,8 +40,9 @@
                     <%= link_to "編集する", edit_post_path(t.id) %>
                     <%= button_to "削除する", post_path(t.id), method: :delete %>
                 <% end %> 
-           　
-        <% end %>
-   
+           </div>
+                           <% end %>
+   </div>
+          </div>
 
 
