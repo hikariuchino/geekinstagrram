@@ -1,16 +1,18 @@
 
-
+<div class="search">
 <h3>投稿を検索</h3>
     <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
     <%= text_field_tag :search %>
     <%= submit_tag '検索する'  %>
     <% end %>
+</div>
 
-<h5>投稿一覧</h5>
-<div class="posts-container">
-    <div class="row">
+
+<h3>投稿一覧</h3>
+
+    
         <% @posts.each do |t| %>
-            <div class="col-sm">
+           
                 <div class="post">
                     <%= t.user.email %>
                     <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
@@ -36,9 +38,8 @@
                     <%= link_to "編集する", edit_post_path(t.id) %>
                     <%= button_to "削除する", post_path(t.id), method: :delete %>
                 <% end %> 
-            </div>　
+           　
         <% end %>
-    </div>
-</div>
+   
 
 
