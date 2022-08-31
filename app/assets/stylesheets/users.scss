@@ -10,8 +10,12 @@
 }
 
 img{
-    width: 80px; 
-    height: auto; 
+    width: 200px; 
+    height: 200px; 
+    
+    margin: 30px auto;
+    max-width: 200px;
+    border-radius: 50%; 
 }
 
 .box0{
